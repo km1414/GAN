@@ -11,7 +11,7 @@ Some results on cinema classics:
 
 **The Matrix**
 
-<img src="/images/matrix_1.png" height="300"/><img src="/images/matrix_2.png" height="300"/><img src="/images/matrix_3.png" height="300"/><img src="/images/matrix_4.png" height="300"/>
+<img src="/images/matrix_1.png" height="340"/><img src="/images/matrix_2.png" height="340"/><img src="/images/matrix_3.png" height="340"/><img src="/images/matrix_4.png" height="340"/>
 
 
 
