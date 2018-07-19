@@ -7,9 +7,11 @@ Paper about GANs: https://arxiv.org/abs/1406.2661
 
 Used some code from: https://www.coursera.org/learn/intro-to-deep-learning/home/week/4
 
-Some results: 
+Some results on cinema classics: 
 
-<img src="/images/simpsons/simpons_1.png" height="260"/><img src="/images/example2.png" height="260"/><img src="/images/example3.png" height="260"/><img src="/images/models.png" height="260"/>
+**The Matrix**
+
+<img src="/images/martix_1.png" height="260"/><img src="/images/martix_2.png" height="260"/><img src="/images/martix_3.png" height="260"/><img src="/images/martix_4.png" height="260"/>
 
 
 
