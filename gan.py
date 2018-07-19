@@ -196,7 +196,7 @@ class GAN():
 
 # start the process
 gan = GAN()
-gan.get_data(video_file='data/simpsons.avi', frame_skip=5)
+gan.get_data(video_file='data/video.avi', frame_skip=5)
 gan.create_generator()
 gan.create_discriminator()
 gan.create_tf_objects()
