@@ -167,7 +167,7 @@ class GAN():
         plt.savefig(sample_dir+'/render_epochs_' + str(epoch) + '.png', dpi=200)
         plt.close()
 
-    def train(self, epochs, batch_size):
+    def train(self, epochs, batch_size, discriminator_steps=5, generator_steps=1):
 
         """ Perform training steps and get results. """
 
@@ -176,13 +176,14 @@ class GAN():
             feed_dict = {self.real_data: self.sample_data_batch(batch_size),
                          self.noise: self.sample_noise_batch(batch_size)}
 
-            for i in range(5):
+            for d in range(discriminator_steps):
                 self.s.run(self.disc_optimizer, feed_dict)
-            self.s.run(self.gen_optimizer, feed_dict)
+            for g in range(generator_steps):
+                self.s.run(self.gen_optimizer, feed_dict)
             g_loss = self.s.run(self.g_loss, feed_dict)
             d_loss = self.s.run(self.d_loss, feed_dict)
 
-            if epoch % 10 == 0:
+            if epoch % 100 == 0:
                 self.sample_images(4, 5, self.global_epoch, True)
                 print('Images successfully generated.')
 
@@ -195,15 +196,8 @@ class GAN():
 
 # start the process
 gan = GAN()
-gan.get_data(video_file='data/video.avi', frame_skip=5)
+gan.get_data(video_file='data/simpsons.avi', frame_skip=5)
 gan.create_generator()
 gan.create_discriminator()
 gan.create_tf_objects()
-gan.train(epochs=100000, batch_size=256)
-
-
-
-
-
-
-
+gan.train(epochs=100000, batch_size=100, discriminator_steps=5, generator_steps=1)
