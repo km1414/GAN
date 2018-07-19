@@ -1,7 +1,6 @@
 # Generative Adversarial Network
 
-**Simple GAN model, which produces data set from selected video (cuts it into frames) and learns to generate related images.
-Needs about a day of training on GPU to get significant results, but after about 100k epochs the process collapses and model starts to generate monotonous pictures. This probably could be solved by tuning hyper-parameters or choosing different layers architecture.**
+**Simple GAN model, which produces data set from selected video (cuts it into frames) and learns to generate related images by simultaneously training generator and discriminator neural networks. Needs about a day of running on GPU to get significant results, but after about 100k epochs the process collapses and model starts to generate monotonous pictures. This probably could be solved by tuning hyper-parameters or choosing different layers architecture.**
 
 **Paper about GANs: https://arxiv.org/abs/1406.2661**
 
